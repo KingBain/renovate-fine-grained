@@ -27,10 +27,11 @@ jobs:
           repositories: ${{ github.event.repository.name }}
           owner: ${{ github.repository_owner }}
           permission-contents: write
+          permission-workflows: write
           permission-pull-requests: write
           permission-issues: write
-          permission-vulnerability-alerts: read
           permission-statuses: write
+          permission-vulnerability-alerts: read
 
       - name: Run Renovate
         uses: renovatebot/github-action@6d859fc95779be83a0335ca704879b47e5d79641 # v46.1.16
